@@ -30,13 +30,18 @@ When testing/changing module imports, it can sometimes be useful to use
 ### Changing the theme
 
 Because we're importing the theme using Hugo modules, you do not need a `theme`
-key in your config file. Simply change the first `[[module.imports]]` `path` in
+key in your config file. Simply change the first `module.imports` `path` in
 that file to a different theme's repository address. This can be any valid git
 repo, so it does not need to be a "published" Hugo theme.
 
+If you're developing locally on the theme you're importing as a module (which
+was my original use case) you can use the
+[`replacements` mapping feature](https://gohugo.io/hugo-modules/configuration/#module-config-top-level),
+either in the config file itself or as an environment variable.
+
 ### Changing the content
 
-The second `[[module.imports]]` `path`, and the `[[module.imports.mounts]]`
+The second `module.imports` `path`, and the `module.imports.mounts`
 section below it, specifies the source of your content. If you want to use Hugo
 normally (without importing content from another repo) simply remove this
 section.
