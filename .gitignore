@@ -1,9 +1,9 @@
 # Hugo compiled site
 public
-public/*
 
 # Hugo build artifacts
 .hugo_build.lock
+_vendor
 
 # Trash
 $RECYCLE.BIN/
