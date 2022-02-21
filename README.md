@@ -76,6 +76,23 @@ a local `_vendor` folder. As
 points out, this is very useful for debugging how modules are being mounted,
 especially for "not module ready" Hugo themes.
 
+## Building your own Hugo module site
+
+If you don't want to fork this project, you can create a site with Hugo modules
+from scratch. The first article listed below is a great walk-through, but the
+list of commands alone is:
+
+```sh
+mkdir <site_name>
+cd <site_name>
+git init
+hugo new site <site_name>
+hugo mod init <repo_url>
+```
+
+Then add the `module` and `module.imports` sections of your Hugo config file,
+specifying the module(s) you want to use.
+
 ## Additional resources
 
 - [Master Hugo Modules: Managing Themes as Modules](https://www.hugofordevelopers.com/articles/master-hugo-modules-managing-themes-as-modules/)
