@@ -1,0 +1,48 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'en-us'
+title = 'Hugo testing site'
+
+# Any other usual Hugo config settings can go up here.
+
+# Hugo module documentation: https://gohugo.io/hugo-modules/
+# Also see the 'additional resources' section of this project's readme.
+[module]
+
+  # How does Hugo know this is a theme? It interprets it based on the contents.
+  # The comment we add with the path is just to remind ourselves.
+  [[module.imports]]
+    # Paths are protocol-relative, meaning they should NOT start with http[s]://
+    path = "github.com/rootwork/hugo-clarity" # Project theme
+
+  # Here we are importing a repo, but using additional `mounts` settings to
+  # specify a subdirectory.
+  [[module.imports]]
+      path = "github.com/chipzoller/hugo-clarity"
+      # Setting 'disabled' to true allows you to preserve the module cache and
+      # settings without actually loading it into Hugo.
+      disabled = false
+
+      [[module.imports.mounts]]
+      # `source` sets a subdirectory of the import path.
+      source = "exampleSite/content" # Project content
+      # `target` places the contents of the source in a virtual directory at
+      # this location. For instance, if you wanted all your content to have
+      # paths prefixed by "blog", you would change `target` to "content/blog".
+      # Note this means you could actually have multiple content repos, each
+      # imported to a different target path.
+      target = "content"
+
+      # Now we use a similar qualified module import to get our static assets.
+      # We don't have to declare the path again because this is coming from the
+      # same repo.
+      [[module.imports.mounts]]
+      source = "exampleSite/static" # Project static assets
+      target = "static"
+
+  # Module mounts don't have to only come from imports; they can also be
+  # local paths. While this is documented:
+  # https://gohugo.io/hugo-modules/configuration/#module-config-mounts
+  # so far I haven't been able to get this to work.
+  # [[module.mounts]]
+    # source = 'my_assets'
+    # target = 'assets'
