@@ -1,0 +1,81 @@
+# Hugo compiled site
+public
+public/*
+
+# Hugo build artifacts
+.hugo_build.lock
+
+# Trash
+$RECYCLE.BIN/
+.Trashes
+Network Trash Folder
+.Trash-*
+.nfs*
+
+# Temporary files
+.TemporaryItems
+Temporary Items
+.fuse_hidden*
+*~
+*.swp
+*.swo
+.tmp
+*.tmp
+
+# Folder view configuration files
+.DS_Store
+.AppleDouble
+.LSOverride
+Desktop.ini
+.directory
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.VolumeIcon.icns
+.AppleDB
+.apdisk
+
+# Production files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependency subdirectories
+node_modules/
+jspm_packages/
+bower_components/
+
+# Caches
+.cache
+.cache-loader
+._*
+Thumbs.db
+ehthumbs.db
+.npm
+*.tsbuildinfo
+.eslintcache
+.sass-cache/
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Style maps
+*.css.map
+*.sass.map
+*.scss.map
+
+# Sublime Text Package Control
+Package Control.last-run
+Package Control.ca-list
+Package Control.ca-bundle
