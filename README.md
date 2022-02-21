@@ -68,6 +68,14 @@ updated. If you want to update them you have
 - Update a single module: `hugo mod get -u <repo_path>`
 - Update a single module to a specific version: `hugo mod get <repo_path>@<git_tag>`
 
+### Verifying what's being loaded and where
+
+Run `hugo mod vendor` to load all modules (and their recursive dependencies) to
+a local `_vendor` folder. As
+[Nick at Hugo for Developers](https://www.hugofordevelopers.com/articles/master-hugo-modules-managing-themes-as-modules/)
+points out, this is very useful for debugging how modules are being mounted,
+especially for "not module ready" Hugo themes.
+
 ## Additional resources
 
 - [Master Hugo Modules: Managing Themes as Modules](https://www.hugofordevelopers.com/articles/master-hugo-modules-managing-themes-as-modules/)
