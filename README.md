@@ -39,14 +39,15 @@ was my original use case) you can use the
 [`replacements` mapping feature](https://gohugo.io/hugo-modules/configuration/#module-config-top-level),
 either in the config file itself or as an environment variable. You'll need to
 run `hugo mod get` after you set these values and regenerate the site (don't
-rely on liveReload).
+rely on liveReload), and in my testing I generally needed to run
+[`hugo mod vendor`](#verifying-whats-being-loaded-and-where) and then regenerate
+the site each time I changed anything in the locally-loaded module.
 
-If you run into issues with replacements mapping, I had better success using the
+In general I had better success using the
 [`replace` directive directly in `go.mod`](https://gohugo.io/hugo-modules/use-modules/#make-and-test-changes-in-a-module)
-instead -- it avoids some issues when modules are nested. Then use
-[`hugo mod vendor`](#verifying-whats-being-loaded-and-where) to see what's being
-loaded. You can also
-[consult this walk-through](https://www.staticsiteguru.com/post/module-replace/).
+instead of replacement mapping in the config file -- it avoids some issues when
+modules are nested. Also take a look at
+[this walk-through](https://www.staticsiteguru.com/post/module-replace/).
 
 ### Changing the content
 
@@ -129,6 +130,7 @@ of the following work as paths:
 ## Additional resources
 
 - [Master Hugo Modules: Managing Themes as Modules](https://www.hugofordevelopers.com/articles/master-hugo-modules-managing-themes-as-modules/)
+- [How to use Hugo Modules](https://geeksocket.in/posts/hugo-modules/)
 - [How to add a theme using modules (for beginners)](https://discourse.gohugo.io/t/how-to-add-a-theme-using-modules-for-beginners/20665)
 - [Hugo modules for “dummies”](https://discourse.gohugo.io/t/hugo-modules-for-dummies/20758)
 - [Hugo Module replacements](https://www.staticsiteguru.com/post/module-replace/)
