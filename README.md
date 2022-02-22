@@ -37,12 +37,15 @@ repo, so it does not need to be a "published" Hugo theme.
 If you're developing locally on the theme you're importing as a module (which
 was my original use case) you can use the
 [`replacements` mapping feature](https://gohugo.io/hugo-modules/configuration/#module-config-top-level),
-either in the config file itself or as an environment variable. You'll need to
-run `hugo mod get` after you set these values and regenerate the site (don't
-rely on liveReload). If you run into issues, try
-[`hugo mod vendor`](#verifying-whats-being-loaded-and-where) to see what's being
-loaded, or
-[consult this walk-through.](https://www.staticsiteguru.com/post/module-replace/)
+either in the config file itself or as an environment variable.
+
+You'll need to run `hugo mod get` after you set these values and regenerate the
+site (don't rely on liveReload). If you run into issues, you can try using the
+[`replace` directive directly in `go.mod`](https://gohugo.io/hugo-modules/use-modules/#make-and-test-changes-in-a-module)
+instead -- I had more success with that, and it avoids issues when modules are
+nested. Use [`hugo mod vendor`](#verifying-whats-being-loaded-and-where) to see
+what's being loaded, and
+[consult this walk-through](https://www.staticsiteguru.com/post/module-replace/).
 
 ### Changing the content
 
