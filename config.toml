@@ -34,9 +34,8 @@ title = 'Hugo testing site'
       # when you're using this strategy on a multilingual site.
       lang = "en"
       # Exclude files matching a certain glob pattern. There is also an
-      # alternate `includeStrings` option. At the moment this doesn't seem to
-      # have any effect.
-      excludeStrings = "*.pt.md"
+      # alternate `includeFiles` option.
+      excludeFiles = "**.pt.md"
 
       # Now we use a similar qualified module import to get our static assets.
       # We don't have to declare the path again because this is coming from the

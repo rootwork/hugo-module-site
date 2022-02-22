@@ -109,12 +109,15 @@ assets when Hugo builds a production site, but doesn't seem to load them in a
 development liveReload environment. I'm not sure why, or whether this affects
 other types of imports (it clearly doesn't affect content imports).
 
-- I was not able to get the `excludeStrings` glob patterns to work to actually
-exclude content files in a module import.
-
 - Module mounts can be local; they don't have to be from remote repos. However
 when trying to specify a local mount (e.g. `source = 'my_assets'` /
 `target = 'assets'`) it didn't seem to work.
+
+- I haven't yet determined how to import a module from a specific branch on a
+repo. For example, none of the following work as paths:
+  - `<repo>@<branch>` (How Hugo modules reference a tag)
+  - `<repo>/tree/<branch>` (GitHub style)
+  - `<repo>#<branch>` (npm style)
 
 ## Additional resources
 
