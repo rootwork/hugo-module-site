@@ -88,9 +88,6 @@ from scratch. The first resource [listed below](#additional-resources) is a
 great walk-through, but the list of commands alone is:
 
 ```sh
-mkdir <site_name>
-cd <site_name>
-git init
 hugo new site <site_name>
 hugo mod init <repo_url>
 ```
