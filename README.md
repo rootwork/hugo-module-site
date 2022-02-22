@@ -29,22 +29,23 @@ See [`config.toml`](config.toml) for a line-by-line commented guide, or read on.
 
 ### Changing the theme
 
-Because we're importing the theme using Hugo modules, you do not need a `theme`
-key in your config file. Simply change the first `module.imports` `path` in
-that file to a different theme's repository address. This can be any valid git
-repo, so it does not need to be a "published" Hugo theme.
+Because we're importing the theme using Hugo modules, **you do not need a
+`theme` key in your config file**. To change your theme, update the first
+`module.imports` `path` in the config file to a different theme's repository
+address. This can be any git repo hosting a Hugo theme.
 
 If you're developing locally on the theme you're importing as a module (which
 was my original use case) you can use the
 [`replacements` mapping feature](https://gohugo.io/hugo-modules/configuration/#module-config-top-level),
-either in the config file itself or as an environment variable.
+either in the config file itself or as an environment variable. You'll need to
+run `hugo mod get` after you set these values and regenerate the site (don't
+rely on liveReload).
 
-You'll need to run `hugo mod get` after you set these values and regenerate the
-site (don't rely on liveReload). If you run into issues, you can try using the
+If you run into issues with replacements mapping, I had better success using the
 [`replace` directive directly in `go.mod`](https://gohugo.io/hugo-modules/use-modules/#make-and-test-changes-in-a-module)
-instead -- I had more success with that, and it avoids issues when modules are
-nested. Use [`hugo mod vendor`](#verifying-whats-being-loaded-and-where) to see
-what's being loaded, and
+instead -- it avoids some issues when modules are nested. Then use
+[`hugo mod vendor`](#verifying-whats-being-loaded-and-where) to see what's being
+loaded. You can also
 [consult this walk-through](https://www.staticsiteguru.com/post/module-replace/).
 
 ### Changing the content
