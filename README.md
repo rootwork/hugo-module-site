@@ -39,7 +39,10 @@ was my original use case) you can use the
 [`replacements` mapping feature](https://gohugo.io/hugo-modules/configuration/#module-config-top-level),
 either in the config file itself or as an environment variable. You'll need to
 run `hugo mod get` after you set these values and regenerate the site (don't
-rely on liveReload). [Here's a walk-through.](https://www.staticsiteguru.com/post/module-replace/)
+rely on liveReload). If you run into issues, try
+[`hugo mod vendor`](#verifying-whats-being-loaded-and-where) to see what's being
+loaded, or
+[consult this walk-through.](https://www.staticsiteguru.com/post/module-replace/)
 
 ### Changing the content
 
