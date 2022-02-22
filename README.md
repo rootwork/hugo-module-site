@@ -37,7 +37,9 @@ repo, so it does not need to be a "published" Hugo theme.
 If you're developing locally on the theme you're importing as a module (which
 was my original use case) you can use the
 [`replacements` mapping feature](https://gohugo.io/hugo-modules/configuration/#module-config-top-level),
-either in the config file itself or as an environment variable.
+either in the config file itself or as an environment variable. You'll need to
+run `hugo mod get` after you set these values and regenerate the site (don't
+rely on liveReload).
 
 ### Changing the content
 
