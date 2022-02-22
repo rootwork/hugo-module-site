@@ -96,11 +96,17 @@ great walk-through, but the list of commands alone is:
 
 ```sh
 hugo new site <site_name>
+cd <site_name>
 hugo mod init <repo_url>
 ```
 
 Then add the `module` and `module.imports` sections of your Hugo config file,
 specifying the module(s) you want to use.
+
+If your Hugo site is in a subdirectory of your repo, be sure to run
+`hugo mod init` in the Hugo directory. The `go.mod` and `go.sum` files that get
+created need to be at the same level in your directory tree as the location
+where you run other `hugo` commands.
 
 ## Known issues and bugs
 
