@@ -39,7 +39,7 @@ was my original use case) you can use the
 [`replacements` mapping feature](https://gohugo.io/hugo-modules/configuration/#module-config-top-level),
 either in the config file itself or as an environment variable. You'll need to
 run `hugo mod get` after you set these values and regenerate the site (don't
-rely on liveReload).
+rely on liveReload). [Here's a walk-through.](https://www.staticsiteguru.com/post/module-replace/)
 
 ### Changing the content
 
@@ -80,7 +80,7 @@ updated. If you want to update them you have
 - Update all modules: `hugo mod get -u`
 - Update all modules recursively: `hugo mod get -u ./...`
 - Update a single module: `hugo mod get -u <repo_path>`
-- Update a single module to a specific version: `hugo mod get <repo_path>@<git_tag>`
+- Update a single module to a specific version (tag [must use semver](https://go.dev/doc/modules/version-numbers)): `hugo mod get <repo_path>@<git_tag>`
 
 ### Verifying what's being loaded and where
 
@@ -124,6 +124,7 @@ of the following work as paths:
 - [Master Hugo Modules: Managing Themes as Modules](https://www.hugofordevelopers.com/articles/master-hugo-modules-managing-themes-as-modules/)
 - [How to add a theme using modules (for beginners)](https://discourse.gohugo.io/t/how-to-add-a-theme-using-modules-for-beginners/20665)
 - [Hugo modules for “dummies”](https://discourse.gohugo.io/t/hugo-modules-for-dummies/20758)
+- [Hugo Module replacements](https://www.staticsiteguru.com/post/module-replace/)
 - [My modular site (by bep)](https://github.com/bep/my-modular-site)
 - [Hugo Modules documentation](https://gohugo.io/hugo-modules/)
 
