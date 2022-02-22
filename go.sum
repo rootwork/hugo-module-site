@@ -2,9 +2,5 @@ github.com/chipzoller/hugo-clarity v0.0.0-20220211152242-d9bf479a91bc h1:Yqisyin
 github.com/chipzoller/hugo-clarity v0.0.0-20220211152242-d9bf479a91bc/go.mod h1:v1JkaKdcLRibyUCalLP2CNeFo6FGzfd4ipEr4dK0+Zg=
 github.com/chipzoller/hugo-clarity v0.0.0-20220222000918-17e6574dd5c9 h1:qJ0gY1O4YXrX4TTlYIQl/NvDIGvuJ1X0T+E1f67n45w=
 github.com/chipzoller/hugo-clarity v0.0.0-20220222000918-17e6574dd5c9/go.mod h1:v1JkaKdcLRibyUCalLP2CNeFo6FGzfd4ipEr4dK0+Zg=
-github.com/craftsmandigital/markdown-content-repo v0.0.0-20190912190609-a1d05b25ffd9 h1:qs0iGdUgP/ZZIS1VjF+TB6NErII8YDIuYYPsfA9FOi0=
-github.com/craftsmandigital/markdown-content-repo v0.0.0-20190912190609-a1d05b25ffd9/go.mod h1:IokFtpmHjIt5aF7HqLwj4/5iHH9ufF9F/JUMNJQEiFc=
 github.com/rootwork/hugo-clarity v0.0.0-20220211152242-d9bf479a91bc h1:I62nScpCSkk+9sgOaknGn8tAZ34ulYhZ5djNVZIRHz0=
 github.com/rootwork/hugo-clarity v0.0.0-20220211152242-d9bf479a91bc/go.mod h1:btWPbIXAqDYTQQJpiYdR/V+OD94fZDpxtksCoKmzy2E=
-github.com/yihui/hugo-xmin v0.0.0-20220119192825-50fc665d2a11 h1:Izhhz3C7gWE60t/gyuZgnXeYwBoMTe7EEvqQNkojzxc=
-github.com/yihui/hugo-xmin v0.0.0-20220119192825-50fc665d2a11/go.mod h1:RiCR4psTF4iydlh4bR9BijKIHmivp7IeBaokx0CvzRA=
