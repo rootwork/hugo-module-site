@@ -109,8 +109,9 @@ assets when Hugo builds a production site, but doesn't seem to load them in a
 development liveReload environment. I'm not sure why, or whether this affects
 other types of imports (it clearly doesn't affect content imports).
 
-- I haven't yet determined how to import a module from a specific branch on a
-repo. For example, none of the following work as paths:
+- [#9541](https://github.com/gohugoio/hugo/issues/9541): It doesn't appear to be
+possible to import a module from a specific branch on a repo. For example, none
+of the following work as paths:
   - `<repo>@<branch>` (How Hugo modules reference a tag)
   - `<repo>/tree/<branch>` (GitHub style)
   - `<repo>#<branch>` (npm style)
