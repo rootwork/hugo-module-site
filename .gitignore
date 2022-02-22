@@ -3,6 +3,7 @@ public
 
 # Hugo build artifacts
 .hugo_build.lock
+resources
 _vendor
 
 # Trash
