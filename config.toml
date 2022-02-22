@@ -48,9 +48,9 @@ title = 'Hugo testing site'
       target = "static"
 
   # Module mounts don't have to only come from imports; they can also be
-  # local paths. While this is documented:
-  # https://gohugo.io/hugo-modules/configuration/#module-config-mounts
-  # so far I haven't been able to get this to work.
+  # local paths. Uncomment the following and rebuild the site. You'll get a
+  # largely unstyled page with a green background, as `my_assets/sass/main.sass`
+  # will now be overriding the theme's Sass file.
   # [[module.mounts]]
-    # source = 'my_assets'
-    # target = 'assets'
+  #   source = 'my_assets'
+  #   target = 'assets'

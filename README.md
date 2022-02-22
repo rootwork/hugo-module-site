@@ -109,10 +109,6 @@ assets when Hugo builds a production site, but doesn't seem to load them in a
 development liveReload environment. I'm not sure why, or whether this affects
 other types of imports (it clearly doesn't affect content imports).
 
-- Module mounts can be local; they don't have to be from remote repos. However
-when trying to specify a local mount (e.g. `source = 'my_assets'` /
-`target = 'assets'`) it didn't seem to work.
-
 - I haven't yet determined how to import a module from a specific branch on a
 repo. For example, none of the following work as paths:
   - `<repo>@<branch>` (How Hugo modules reference a tag)
