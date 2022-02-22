@@ -7,8 +7,6 @@ repo.
 
 I use it as a way to quickly test themes.
 
-See [`config.toml`](config.toml) for a line-by-line commented guide, or read on.
-
 ## Requirements
 
 - [Go must be installed](https://go.dev/dl/) on your local machine.
@@ -26,6 +24,8 @@ When testing/changing module imports, it can sometimes be useful to use
 `hugo server --disableFastRender --gc` to ensure nothing is being cached.
 
 ## Development
+
+See [`config.toml`](config.toml) for a line-by-line commented guide, or read on.
 
 ### Changing the theme
 
@@ -46,10 +46,6 @@ section below it, specifies the source of your content. If you want to use Hugo
 normally (without importing content from another repo) simply remove this
 section.
 
-Note that module-imported content only pulls in items at that address, e.g.
-static assets like images, if they are stored outside of the content folder,
-will not be included.
-
 #### Can I still use `hugo new` to create a post?
 
 **Sort of.** If you run the command `hugo new foo.md`, for instance, Hugo will
@@ -61,6 +57,17 @@ lists of posts.
 
 In general, it's probably better to decide to either use a separate repo for all
 your content, or generate all your content locally.
+
+### Loading other resources into Hugo from modules
+
+You can use modules to
+[set mount points](https://gohugo.io/hugo-modules/configuration/#module-config-mounts)
+for all of Hugo's base directories: `content`, `static`, `layouts`, `data`,
+`assets`, `i18n`, and `archetypes`.
+
+As the comments in [`config.toml`](config.toml) illustrate, you can even have
+multiple sources for some of these, such as separate content repos loaded by
+language in a multilingual site.
 
 ### Updating a module
 
@@ -97,15 +104,6 @@ specifying the module(s) you want to use.
 
 ## Known issues and bugs
 
-Note any of the following might be due to my own misunderstanding of the Hugo
-[module mount documentation](https://gohugo.io/hugo-modules/configuration/#module-config-mounts),
-typos, etc. but in working with modules I've found:
-
-- Module imports for static assets (`target = "static"`) successfully load the
-assets when Hugo builds a production site, but doesn't seem to load them in a
-development liveReload environment. I'm not sure why, or whether this affects
-other types of imports (it clearly doesn't affect content imports).
-
 - [#9541](https://github.com/gohugoio/hugo/issues/9541): It doesn't appear to be
 possible to import a module from a specific branch on a repo. For example, none
 of the following work as paths:
@@ -119,6 +117,7 @@ of the following work as paths:
 - [How to add a theme using modules (for beginners)](https://discourse.gohugo.io/t/how-to-add-a-theme-using-modules-for-beginners/20665)
 - [Hugo modules for “dummies”](https://discourse.gohugo.io/t/hugo-modules-for-dummies/20758)
 - [My modular site (by bep)](https://github.com/bep/my-modular-site)
+- [Hugo Modules documentation](https://gohugo.io/hugo-modules/)
 
 ## License
 
