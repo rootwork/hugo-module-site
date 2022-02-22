@@ -84,8 +84,8 @@ especially for "not module ready" Hugo themes.
 ## Building your own Hugo module site
 
 If you don't want to fork this project, you can create a site with Hugo modules
-from scratch. The first article listed below is a great walk-through, but the
-list of commands alone is:
+from scratch. The first resource [listed below](#additional-resources) is a
+great walk-through, but the list of commands alone is:
 
 ```sh
 mkdir <site_name>
@@ -97,6 +97,24 @@ hugo mod init <repo_url>
 
 Then add the `module` and `module.imports` sections of your Hugo config file,
 specifying the module(s) you want to use.
+
+## Known issues and bugs
+
+Note any of the following might be due to my own misunderstanding of the Hugo
+[module mount documentation](https://gohugo.io/hugo-modules/configuration/#module-config-mounts),
+typos, etc. but in working with modules I've found:
+
+- Module imports for static assets (`target = "static"`) successfully load the
+assets when Hugo builds a production site, but doesn't seem to load them in a
+development liveReload environment. I'm not sure why, or whether this affects
+other types of imports (it clearly doesn't affect content imports).
+
+- I was not able to get the `excludeStrings` glob patterns to work to actually
+exclude content files in a module import.
+
+- Module mounts can be local; they don't have to be from remote repos. However
+when trying to specify a local mount (e.g. `source = 'my_assets'` /
+`target = 'assets'`) it didn't seem to work.
 
 ## Additional resources
 

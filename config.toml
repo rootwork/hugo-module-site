@@ -28,13 +28,22 @@ title = 'Hugo testing site'
       # `target` places the contents of the source in a virtual directory at
       # this location. For instance, if you wanted all your content to have
       # paths prefixed by "blog", you would change `target` to "content/blog".
-      # Note this means you could actually have multiple content repos, each
-      # imported to a different target path.
       target = "content"
+      # Using the path prefixing noted above, you might be importing content
+      # from multiple repos. The `lang` attribute lets you set a language code
+      # when you're using this strategy on a multilingual site.
+      lang = "en"
+      # Exclude files matching a certain glob pattern. There is also an
+      # alternate `includeStrings` option. At the moment this doesn't seem to
+      # have any effect.
+      excludeStrings = "*.pt.md"
 
       # Now we use a similar qualified module import to get our static assets.
       # We don't have to declare the path again because this is coming from the
       # same repo.
+      #
+      # At the moment this appears to work when Hugo builds a production site,
+      # but not in liveReload environment.
       [[module.imports.mounts]]
       source = "exampleSite/static" # Project static assets
       target = "static"
