@@ -8,18 +8,19 @@ title = 'Hugo testing site'
 # Also see the 'additional resources' section of this project's readme.
 [module]
 
-  # How does Hugo know this is a theme? It interprets it based on the contents.
-  # The comment we add with the path is just to remind ourselves.
+  # First we load a module to use as our theme. How does Hugo know it's a theme?
+  # Hugo interprets it based on its contents. The comment you see next to the
+  # path below is just to remind ourselves.
   [[module.imports]]
     # Paths are protocol-relative, meaning they should NOT start with http[s]://
     path = "github.com/rootwork/hugo-clarity" # Project theme
 
-  # Here we are importing a repo, but using additional `mounts` settings to
-  # specify a subdirectory.
+  # Next we load another module, but qualify it with `mounts` to only import
+  # particular directories for specific Hugo uses.
   [[module.imports]]
       path = "github.com/chipzoller/hugo-clarity"
-      # Setting 'disabled' to true allows you to preserve the module cache and
-      # settings without actually loading it into Hugo.
+      # Setting `disabled` to `true` allows you to preserve the module cache and
+      # settings without actually loading it into Hugo. The default is `false`.
       disabled = false
 
       [[module.imports.mounts]]
@@ -40,17 +41,29 @@ title = 'Hugo testing site'
       # Now we use a similar qualified module import to get our static assets.
       # We don't have to declare the path again because this is coming from the
       # same repo.
-      #
-      # At the moment this appears to work when Hugo builds a production site,
-      # but not in liveReload environment.
       [[module.imports.mounts]]
       source = "exampleSite/static" # Project static assets
       target = "static"
 
+      # Unlike the first module we loaded, Hugo won't pull in anything else from
+      # this module; it loads only at the mounts we specified.
+
   # Module mounts don't have to only come from imports; they can also be
-  # local paths. Uncomment the following and rebuild the site. You'll get a
+  # local paths; in other words, you can use this in place of things like
+  # `assetDir`. Uncomment the following and rebuild the site: You'll get a
   # largely unstyled page with a green background, as `my_assets/sass/main.sass`
   # will now be overriding the theme's Sass file.
   # [[module.mounts]]
   #   source = 'my_assets'
   #   target = 'assets'
+
+  # Any mount locations that have not been overridden with another module (for
+  # instance the `content` and `static` mounts from the second module) or with
+  # local paths (for instance the `assets` mounts if the section above were
+  # uncommented) will be loaded from the first specified module. `i18n`, for
+  # instance, will be mounted at the `/i18n` path relative to the first module's
+  # path at the top of this file. You can set mount points for all of Hugo's
+  # base directories: content, static, layouts, data, assets, i18n, archetypes
+  #
+  # These are also listed here:
+  # https://gohugo.io/hugo-modules/configuration/#module-config-mounts
