@@ -9,7 +9,7 @@ go 1.17
 // the command line. More info:
 // https://github.com/rootwork/hugo-module-site#local-theme-development
 
-// replace github.com/rootwork/hugo-clarity => ../../temp-proj/clarity_develop
+replace github.com/rootwork/hugo-clarity => ../../temp-proj/rootwork_hugo-clarity
 
 require (
 	github.com/chipzoller/hugo-clarity v0.0.0-20220222000918-17e6574dd5c9 // indirect
