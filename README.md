@@ -34,6 +34,8 @@ Because we're importing the theme using Hugo modules, **you do not need a
 `module.imports` `path` in the config file to a different theme's repository
 address. This can be any git repo hosting a Hugo theme.
 
+#### Local theme development
+
 If you're developing locally on the theme you're importing as a module (which
 was my original use case) you can use the
 [`replacements` mapping feature](https://gohugo.io/hugo-modules/configuration/#module-config-top-level),
