@@ -7,7 +7,7 @@ go 1.17
 // rootwork/hugo-clarity module, uncomment the next section and change the local
 // path to a valid directory relative to this file. Then run `hugo mod get` on
 // the command line. More info:
-// https://github.com/rootwork/hugo-module-site#changing-the-theme
+// https://github.com/rootwork/hugo-module-site#local-theme-development
 
 // replace github.com/rootwork/hugo-clarity => ../../temp-proj/clarity_develop
 
