@@ -11,10 +11,10 @@ I use it as a way to quickly test themes.
 
 - [Go must be installed](https://go.dev/dl/) on your local machine.
 - Make sure you have a reasonably-recent version of Hugo (`hugo version`).
-Modules were introduced in 0.55, but additional module-related commands and
-settings have continued to appear up through at least 0.84.2.
+  Modules were introduced in 0.55, but additional module-related commands and
+  settings have continued to appear up through at least 0.84.2.
 - Run `hugo mod help` and make sure you get back something that isn't an error,
-which confirms that the first two requirements have been met.
+  which confirms that the first two requirements have been met.
 
 ## Usage
 
@@ -44,9 +44,9 @@ rely on liveReload), and in my testing I generally needed to run
 the site each time I changed anything in the locally-loaded module.
 
 In general I had better success using the
-[`replace` directive](https://gohugo.io/hugo-modules/use-modules/#make-and-test-changes-in-a-module) directly in [`go.mod`](go.mod)
-instead of replacement mapping in the config file -- it avoids some issues when
-modules are nested. Also take a look at
+[`replace` directive](https://gohugo.io/hugo-modules/use-modules/#make-and-test-changes-in-a-module)
+directly in [`go.mod`](go.mod) instead of replacement mapping in the config file
+-- it avoids some issues when modules are nested. Also take a look at
 [this walk-through](https://www.staticsiteguru.com/post/module-replace/).
 
 ### Changing the content
@@ -121,8 +121,8 @@ where you run other `hugo` commands.
 ## Known issues and bugs
 
 - [#9541](https://github.com/gohugoio/hugo/issues/9541): It doesn't appear to be
-possible to import a module from a specific branch on a repo. For example, none
-of the following work as paths:
+  possible to import a module from a specific branch on a repo. For example, none
+  of the following work as paths:
   - `<repo>@<branch>` (How Hugo modules reference a tag)
   - `<repo>/tree/<branch>` (GitHub style)
   - `<repo>#<branch>` (npm style)
