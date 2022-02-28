@@ -44,7 +44,7 @@ rely on liveReload), and in my testing I generally needed to run
 the site each time I changed anything in the locally-loaded module.
 
 In general I had better success using the
-[`replace` directive directly in `go.mod`](https://gohugo.io/hugo-modules/use-modules/#make-and-test-changes-in-a-module)
+[`replace` directive](https://gohugo.io/hugo-modules/use-modules/#make-and-test-changes-in-a-module) directly in [`go.mod`](go.mod)
 instead of replacement mapping in the config file -- it avoids some issues when
 modules are nested. Also take a look at
 [this walk-through](https://www.staticsiteguru.com/post/module-replace/).
