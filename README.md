@@ -1,3 +1,12 @@
+**Local theme testing branch**: This is a branch I use internally for testing
+themes. This was my original use case for figuring out Hugo modules. Feel free
+to look around, but no guarantee that this branch is in a currently usable
+state. For a better walk-through, switch over to the `main` branch.
+
+The rest of the readme is replicated from `main`.
+
+---
+
 # Hugo module testing site
 
 This repo serves as an example of how to load both themes and content as Hugo
