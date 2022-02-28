@@ -39,17 +39,23 @@ address. This can be any git repo hosting a Hugo theme.
 If you're developing locally on the theme you're importing as a module (which
 was my original use case) you can use the
 [`replacements` mapping feature](https://gohugo.io/hugo-modules/configuration/#module-config-top-level),
-either in the config file itself or as an environment variable. You'll need to
-run `hugo mod get` after you set these values and regenerate the site (don't
-rely on liveReload), and in my testing I generally needed to run
-[`hugo mod vendor`](#verifying-whats-being-loaded-and-where) and then regenerate
-the site each time I changed anything in the locally-loaded module.
+either in the config file itself or as an environment variable.
 
-In general I had better success using the
+However, I had better success using the
 [`replace` directive](https://gohugo.io/hugo-modules/use-modules/#make-and-test-changes-in-a-module)
 directly in [`go.mod`](go.mod) instead of replacement mapping in the config file
 -- it avoids some issues when modules are nested. Also take a look at
 [this walk-through](https://www.staticsiteguru.com/post/module-replace/).
+
+In either case, you'll need to run `hugo mod get` after you set these values and
+regenerate the site (don't rely on liveReload). In my testing I generally needed
+to run [`hugo mod vendor`](#verifying-whats-being-loaded-and-where) each time I
+changed anything in the locally-loaded module. So the command I ended up using
+a lot was:
+
+```sh
+hugo mod get && hugo mod vendor && hugo server --disableFastRender --gc
+```
 
 ### Changing the content
 
