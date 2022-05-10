@@ -105,6 +105,8 @@ updated. If you want to update them you have
 - Update all modules: `hugo mod get -u`
 - Update all modules recursively: `hugo mod get -u ./...`
 - Update a single module: `hugo mod get -u <repo_path>`
+- Update a single module to a specific branch:
+  `hugo mod get <repo_path>@<branch>`
 - Update a single module to a specific version (tag [must use semver](https://go.dev/doc/modules/version-numbers)): `hugo mod get <repo_path>@<git_tag>`
 
 ### Verifying what's being loaded and where
@@ -134,15 +136,6 @@ If your Hugo site is in a subdirectory of your repo, be sure to run
 `hugo mod init` in the Hugo directory. The `go.mod` and `go.sum` files that get
 created need to be at the same level in your directory tree as the location
 where you run other `hugo` commands.
-
-## Known issues and bugs
-
-- [#9541](https://github.com/gohugoio/hugo/issues/9541): It doesn't appear to be
-  possible to import a module from a specific branch on a repo. For example, none
-  of the following work as paths:
-  - `<repo>@<branch>` (How Hugo modules reference a tag)
-  - `<repo>/tree/<branch>` (GitHub style)
-  - `<repo>#<branch>` (npm style)
 
 ## Additional resources
 
